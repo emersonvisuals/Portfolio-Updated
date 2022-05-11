@@ -1084,7 +1084,7 @@ section.sectionTwo .aboutGridContainer {
   -ms-grid-rows: 50% 50%;
       grid-template-rows: 50% 50%;
   grid-row-gap: 1rem;
-      grid-template-areas: "imageOne imageTwo details" "imageOne imageThree details";
+      grid-template-areas: "imageOne imageTwo details" "imageOne imageThree details";
   opacity: 100%;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;

@@ -1,0 +1,227 @@
+@import "./_variables";
+@import "./_keyframes";
+
+body {
+    @include body;
+}
+
+html {
+    @include bodyDefault;
+}
+
+main {
+    @include main
+
+    nav {
+        @include navBarDesktop;
+        
+        .navList {
+
+        }
+    }
+
+    header {
+        padding: $desktopPadding;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .title {
+            animation: boxOneAnimation 1s;
+
+            ul {
+                list-style: none;
+                text-decoration: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding:0;
+
+                    h1 {
+                        @include headingDarkBlue;
+                        padding: 0;
+                        margin: 0;
+                        font-size: $headingFontSizeClamp;
+                    }
+
+                    span {
+                        @include headingLightBlue;
+                        padding: 0;
+                        margin: 0;
+                        font-size: $headingFontSizeClamp;
+                    }
+
+                    h1.titleOutline {
+                        -webkit-text-stroke: 1px $darkBlue;
+                        color: transparent;
+                    }
+
+                    h1.titleOutline span {
+                        -webkit-text-stroke: 1px $blue;
+                        color: transparent;
+                    }
+                }
+
+            }
+        }
+
+        .portfolioBelow {
+            @include scrollBelow;
+        }
+    }
+
+    .background {
+        @include backgroundLogo;
+    }
+}
+
+section.sectionOne {
+    @include section;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        .nameContainer {
+            
+            input {
+                @include contactContainer;
+            }
+        }
+
+        .emailContainer {
+
+            input {
+                @include contactContainer;
+            }
+
+        }
+
+        .companyContainer {
+
+            input {
+                @include contactContainer;
+            }
+
+        }
+
+        .enquiryContainer {
+
+            textarea {
+                @include contactContainer;
+            }
+
+        }
+
+        .submitContainer {
+            width: 100%;
+
+            button.contactButton {
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer {
+    @include defaultFooterDesktop;
+}
+
+section.sectionOne.active {
+
+    .container {
+        @include lineAnimationTitleAfter
+    }
+
+    .titleContainer {
+
+        .title {
+            @include lineAnimationTitleAfter;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    main {
+        @include main
+
+        header {
+            padding: $ipadPadding;
+        }
+
+        nav {
+            @include navBarTablet;
+        }
+
+        nav.active {
+            @include navBarTabletActive;
+        }
+    }
+
+    section.sectionOne {
+        @include sectionTablet;
+        height: 100vh;
+    }
+
+    footer {
+        @include defaultFooterTablet;
+    }
+
+  }
+
+@media only screen and (max-width: 650px) {
+    main {
+        @include main
+
+        nav {
+            @include navBarMobile;
+        }
+
+        nav.active {
+            @include navBarMobileActive;
+        }
+
+        header {
+
+            padding: $mobilePadding;
+
+            .title {
+
+                ul {
+
+                    li {
+
+                        h1 {
+                            font-size: $headingFontSizeClamp02;
+                        }
+
+                        span {
+                            font-size: $headingFontSizeClamp02;
+                        }
+
+                    }
+                }
+                
+            }
+        }
+
+        .background {
+            @include backgroundLogoMobile
+        }
+        
+    }
+
+    section.sectionOne {
+        @include sectionMobile;
+        height: 100vh;
+    }
+
+    footer {
+        @include defaultFooterMobile;
+    }
+}

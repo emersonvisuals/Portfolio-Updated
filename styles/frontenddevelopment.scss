@@ -1,0 +1,319 @@
+@import "./_variables";
+@import "./_keyframes";
+
+body {
+    @include body;
+}
+
+html {
+    @include bodyDefault;
+}
+
+main {
+    @include main
+
+    nav {
+        @include navBarDesktop;
+        
+        .navList {
+
+            li.navPortfolio::before {
+                transform: scaleY(1);
+            }
+
+            .navAbout::before {
+                transform: scaleY(0);
+            }
+
+        }
+    }
+
+    header {
+        padding: $desktopPadding;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .title {
+            animation: boxOneAnimation 1s;
+
+            ul {
+                list-style: none;
+                text-decoration: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding:0;
+
+                    h1 {
+                        @include headingDarkBlue;
+                        padding: 0;
+                        margin: 0;
+                        font-size: $headingFontSizeClamp;
+                    }
+
+                    span {
+                        @include headingLightBlue;
+                        padding: 0;
+                        margin: 0;
+                        font-size: $headingFontSizeClamp;
+                    }
+
+                    h1.titleOutline {
+                        -webkit-text-stroke: 1px $darkBlue;
+                        color: transparent;
+                    }
+
+                    h1.titleOutline span {
+                        -webkit-text-stroke: 1px $blue;
+                        color: transparent;
+                    }
+                }
+
+            }
+        }
+
+        .portfolioBelow {
+            @include scrollBelow;
+        }
+    }
+
+    .background {
+        @include backgroundLogo;
+    }
+}
+
+section.sectionOne {
+    @include section;
+    height: 100vh;
+
+    .titleContainer {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 100%;
+
+        .title {
+            @include lineAnimationTitleBefore;
+            padding: 0 5rem 0 0;
+            position: relative;    
+
+            
+            h1 {
+                @include subHeading;
+                margin: 0;
+                padding:0;
+            }
+
+            p {
+                @include paragraph;
+            }
+
+            .buttonContainer {
+                position: absolute;
+                bottom: -7rem;
+                
+
+                button {
+                    @include buttonNeutral;
+                }
+
+                button:hover {
+                    @include buttonNeutralHover;
+                }
+
+                
+            }
+        }
+
+        .profile {
+            @include lineAnimationTitleBefore02;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+        
+        .buttonContainerMobile {
+            visibility: hidden;
+        }
+    }
+}
+
+footer {
+    @include defaultFooterDesktop;
+}
+
+section.sectionOne.active {
+
+    .container {
+        @include lineAnimationTitleAfter
+    }
+
+    .titleContainer {
+
+        .title {
+            @include lineAnimationTitleAfter;
+        }
+    }
+
+    .profile {
+        @include lineAnimationTitleAfter;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    main {
+        @include main
+
+        header {
+            padding: $ipadPadding;
+        }
+
+        nav {
+            @include navBarTablet;
+        }
+
+        nav.active {
+            @include navBarTabletActive;
+        }
+    }
+
+    section.sectionOne {
+        @include sectionTablet;
+        height: 100vh;
+    }
+
+    section.sectionTwo {
+        @include sectionTablet;
+        height: 100vh;
+    }
+
+    footer {
+        @include defaultFooterTablet;
+    }
+
+  }
+
+@media only screen and (max-width: 650px) {
+    main {
+        @include main
+
+        nav {
+            @include navBarMobile;
+        }
+
+        nav.active {
+            @include navBarMobileActive;
+        }
+
+        header {
+            height: 100vh;
+
+            padding: $mobilePadding;
+
+            .title {
+
+                ul {
+
+                    li {
+
+                        h1 {
+                            font-size: $headingFontSizeClamp02;
+                        }
+
+                        span {
+                            font-size: $headingFontSizeClamp02;
+                        }
+
+                    }
+                }
+                
+            }
+        }
+
+        .background {
+            @include backgroundLogoMobile
+        }
+        
+    }
+
+    section.sectionOne {
+        @include sectionMobile;
+        height: 100%;
+
+        .titleContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 0 5rem 0;
+    
+            .title {
+                @include lineAnimationTitleBefore;
+                padding: 0 0 3rem 0;
+    
+                
+                h1 {
+                    @include subHeading;
+                    margin: 0;
+                    padding:0;
+                }
+    
+                p {
+                    @include paragraph;
+                }
+
+                .buttonContainer {
+                    visibility:hidden;
+                }
+            }
+    
+            .profile {
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 3rem 0;
+    
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            .buttonContainerMobile {
+                visibility: visible;
+                width: 100%;
+
+                button {
+                    @include buttonNeutral;
+                    width: 100%;
+                }
+
+                button:hover {
+                    @include buttonNeutralHover;
+                }
+            }
+        }
+    }
+
+    section.sectionTwo {
+        @include sectionMobile;
+        height: 100vh;
+    }
+
+    footer {
+        @include defaultFooterMobile;
+    }
+}

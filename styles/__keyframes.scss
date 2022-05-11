@@ -1,0 +1,23 @@
+@keyframes boxOneAnimation {
+    @include scroll;
+}
+
+@keyframes portfolioAnimation {
+    @include scroll;
+}
+
+@keyframes blink {
+    @include blink;
+}
+
+@keyframes boxTwoAnimation {
+    @include slideRight;
+}
+
+@keyframes opactityChange {
+    @include opactityChange;
+}
+
+@keyframes tanUnderlineAnimation {
+    @include tanUnderlineAnimation;
+}

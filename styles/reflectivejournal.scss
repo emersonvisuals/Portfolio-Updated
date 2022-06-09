@@ -87,6 +87,7 @@ main {
 
     .titleContainer {
         display: flex;
+        padding: 0 0 2rem 0;
 
         .title {
             @include lineAnimationTitleBefore;
@@ -526,7 +527,7 @@ section.sectionTwo.active {
         }
 
         .diagramContainer {
-            padding: 0 0 30rem 0;
+            padding: 0 0 10rem 0;
         }
     }
 

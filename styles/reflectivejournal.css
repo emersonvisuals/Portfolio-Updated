@@ -662,6 +662,7 @@ main .background svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 0 2rem 0;
 }
 
 .sectionOne .titleContainer .title {
@@ -2232,7 +2233,7 @@ section.sectionTwo.active .diagramContainer img {
     font-weight: 400;
   }
   section.sectionOne .diagramContainer {
-    padding: 0 0 30rem 0;
+    padding: 0 0 10rem 0;
   }
   section.sectionTwo {
     height: 100%;

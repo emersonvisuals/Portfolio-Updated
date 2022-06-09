@@ -350,6 +350,7 @@ section.sectionOne.active {
 }
 
 section.sectionTwo.active {
+    @include lineAnimationTitleAfter
 
     .container {
         @include lineAnimationTitleAfter
@@ -525,10 +526,9 @@ section.sectionTwo.active {
         }
 
         .diagramContainer {
-            padding: 0 0 5rem 0;
+            padding: 0 0 30rem 0;
         }
     }
-
 
     section.sectionTwo {
         @include sectionMobile;
@@ -543,6 +543,7 @@ section.sectionTwo.active {
             row-gap: 4rem;
             margin: 3rem 0 10rem 0;
             padding: 0;
+            @include  lineAnimationTitleBefore;
 
             .containerOne {
                 button.technology {
@@ -588,6 +589,12 @@ section.sectionTwo.active {
             }
 
 
+        }
+    }
+
+    section.sectionTwo.active {
+        .diagramContainer {
+            @include lineAnimationTitleAfter;
         }
     }
 

@@ -395,7 +395,64 @@ section.sectionTwo.active {
 
     section.sectionTwo {
         @include sectionTablet;
-        height: 100vh;
+        height: auto;
+
+        .diagramContainer {
+            display: grid;
+            align-items: flex-start;
+            justify-content: space-around;
+            grid-template-columns: 100%;
+            grid-template-rows: 33% 33% 33%;
+            row-gap: 2rem;
+            margin: 10rem 0;
+            padding: 0;
+
+            .containerOne {
+                button.technology {
+                    visibility: hidden;
+                    display: none;
+                }
+    
+                .technologyP {
+                    visibility: visible;
+                    opacity: 100%;
+                    height: fit-content;
+                    max-height: inherit;
+                }
+
+            }
+
+            .containerTwo {
+                button.sustainability {
+                    visibility: hidden;
+                    display: none;
+                }
+    
+                .sustainabilityP {
+                    visibility: visible;
+                    opacity: 100%;
+                    height: fit-content;
+                    max-height: inherit;
+                }
+            }
+
+            .containerThree {
+                button.multiGenerational {
+                    visibility: hidden;
+                    display: none;
+                }
+    
+                .multiGenerationalP {
+                    visibility: visible;
+                    opacity: 100%;
+                    height: fit-content;
+                    max-height: inherit;
+                }
+            }
+
+
+        }
+        
     }
 
     footer {
@@ -452,64 +509,86 @@ section.sectionTwo.active {
 
         .titleContainer {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
             flex-direction: column;
-            padding: 0 0 5rem 0;
+            padding: 0 0 3rem 0;
     
             .title {
                 @include lineAnimationTitleBefore;
                 padding: 0 0 3rem 0;
     
-                
-                h1 {
-                    @include subHeading;
-                    margin: 0;
-                    padding:0;
-                }
-    
                 p {
                     @include paragraph;
                 }
-
-                .buttonContainer {
-                    visibility:hidden;
-                }
             }
-    
-            .profile {
-                height: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0 0 3rem 0;
-    
-                img {
-                    height: auto;
-                    width: 100%;
-                }
-            }
+        }
 
-            .buttonContainerMobile {
-                visibility: visible;
-                width: 100%;
-
-                button {
-                    @include buttonNeutral;
-                    width: 100%;
-                }
-
-                button:hover {
-                    @include buttonNeutralHover;
-                }
-            }
+        .diagramContainer {
+            padding: 0 0 5rem 0;
         }
     }
 
 
     section.sectionTwo {
         @include sectionMobile;
-        height: 100vh;
+        height: auto;
+
+        .diagramContainer {
+            display: grid;
+            align-items: flex-start;
+            justify-content: space-around;
+            grid-template-columns: 100%;
+            grid-template-rows: 33.33% 33.33% 33.33%;
+            row-gap: 4rem;
+            margin: 3rem 0 10rem 0;
+            padding: 0;
+
+            .containerOne {
+                button.technology {
+                    visibility: hidden;
+                    display: none;
+                }
+    
+                .technologyP {
+                    visibility: visible;
+                    opacity: 100%;
+                    height: fit-content;
+                    max-height: inherit;
+                }
+
+            }
+
+            .containerTwo {
+                button.sustainability {
+                    visibility: hidden;
+                    display: none;
+                }
+    
+                .sustainabilityP {
+                    visibility: visible;
+                    opacity: 100%;
+                    height: fit-content;
+                    max-height: inherit;
+                }
+            }
+
+            .containerThree {
+                button.multiGenerational {
+                    visibility: hidden;
+                    display: none;
+                }
+    
+                .multiGenerationalP {
+                    visibility: visible;
+                    opacity: 100%;
+                    height: fit-content;
+                    max-height: inherit;
+                }
+            }
+
+
+        }
     }
 
     footer {

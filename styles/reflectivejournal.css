@@ -1887,7 +1887,59 @@ section.sectionTwo.active .diagramContainer img {
   section.sectionTwo {
     height: 100%;
     padding: 0 10vw;
-    height: 100vh;
+    height: auto;
+  }
+  section.sectionTwo .diagramContainer {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+    row-gap: 2rem;
+    margin: 10rem 0;
+    padding: 0;
+  }
+  section.sectionTwo .diagramContainer .containerOne button.technology {
+    visibility: hidden;
+    display: none;
+  }
+  section.sectionTwo .diagramContainer .containerOne .technologyP {
+    visibility: visible;
+    opacity: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: inherit;
+  }
+  section.sectionTwo .diagramContainer .containerTwo button.sustainability {
+    visibility: hidden;
+    display: none;
+  }
+  section.sectionTwo .diagramContainer .containerTwo .sustainabilityP {
+    visibility: visible;
+    opacity: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: inherit;
+  }
+  section.sectionTwo .diagramContainer .containerThree button.multiGenerational {
+    visibility: hidden;
+    display: none;
+  }
+  section.sectionTwo .diagramContainer .containerThree .multiGenerationalP {
+    visibility: visible;
+    opacity: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: inherit;
   }
   footer {
     height: calc(100%);
@@ -2145,17 +2197,17 @@ section.sectionTwo.active .diagramContainer img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 0 5rem 0;
+    padding: 0 0 3rem 0;
   }
   section.sectionOne .titleContainer .title {
     opacity: 0%;
@@ -2165,74 +2217,71 @@ section.sectionTwo.active .diagramContainer img {
             transform: translateY(-3rem);
     padding: 0 0 3rem 0;
   }
-  section.sectionOne .titleContainer .title h1 {
-    text-transform: uppercase;
-    font-size: clamp(3.75rem, 3.75vw, 6.5rem);
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-  }
   section.sectionOne .titleContainer .title p {
     font-size: clamp(1.19rem, 0.9vw, 2rem);
     font-family: poppins;
     line-height: clamp(3rem, 2vw, 4rem);
     font-weight: 400;
   }
-  section.sectionOne .titleContainer .title .buttonContainer {
-    visibility: hidden;
-  }
-  section.sectionOne .titleContainer .profile {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 0 3rem 0;
-  }
-  section.sectionOne .titleContainer .profile img {
-    height: auto;
-    width: 100%;
-  }
-  section.sectionOne .titleContainer .buttonContainerMobile {
-    visibility: visible;
-    width: 100%;
-  }
-  section.sectionOne .titleContainer .buttonContainerMobile button {
-    background-color: transparent;
-    padding: 1.25rem clamp(6rem, 1.5vw, 10rem);
-    border-radius: 5rem;
-    font-family: poppins;
-    font-weight: 600;
-    font-size: clamp(1.5rem, 1.25vw, 2.7rem);
-    color: #1C56A3;
-    border: 1px solid #1C56A3;
-    -webkit-transition: 0.25s all;
-    transition: 0.25s all;
-    text-transform: capitalize;
-    width: 100%;
-  }
-  section.sectionOne .titleContainer .buttonContainerMobile button:hover {
-    background: linear-gradient(27deg, #10376c 0%, #1c56a3 100%);
-    padding: 1.25rem clamp(6rem, 1.5vw, 10rem);
-    border-radius: 5rem;
-    font-family: poppins;
-    font-weight: 600;
-    font-size: clamp(1.5rem, 1.25vw, 2.7rem);
-    color: #FFFFFF;
-    border: 1px solid transparent;
-    -webkit-transition: 0.25s all;
-    transition: 0.25s all;
-    cursor: pointer;
+  section.sectionOne .diagramContainer {
+    padding: 0 0 5rem 0;
   }
   section.sectionTwo {
     height: 100%;
     padding: 0 7vw;
-    height: 100vh;
+    height: auto;
+  }
+  section.sectionTwo .diagramContainer {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 33.33% 33.33% 33.33%;
+        grid-template-rows: 33.33% 33.33% 33.33%;
+    row-gap: 4rem;
+    margin: 3rem 0 10rem 0;
+    padding: 0;
+  }
+  section.sectionTwo .diagramContainer .containerOne button.technology {
+    visibility: hidden;
+    display: none;
+  }
+  section.sectionTwo .diagramContainer .containerOne .technologyP {
+    visibility: visible;
+    opacity: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: inherit;
+  }
+  section.sectionTwo .diagramContainer .containerTwo button.sustainability {
+    visibility: hidden;
+    display: none;
+  }
+  section.sectionTwo .diagramContainer .containerTwo .sustainabilityP {
+    visibility: visible;
+    opacity: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: inherit;
+  }
+  section.sectionTwo .diagramContainer .containerThree button.multiGenerational {
+    visibility: hidden;
+    display: none;
+  }
+  section.sectionTwo .diagramContainer .containerThree .multiGenerationalP {
+    visibility: visible;
+    opacity: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: inherit;
   }
   footer {
     height: calc(100%);

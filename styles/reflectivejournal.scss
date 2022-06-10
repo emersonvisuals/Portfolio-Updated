@@ -153,7 +153,7 @@ main {
             @include lineAnimationTitleBefore;
         }
     }
-}
+}    
 
 .sectionTwo {
     @include section;
@@ -362,6 +362,128 @@ main {
     }
 }
 
+.sectionThree {
+    @include section;
+    height: 125vh;
+
+    .titleContainer {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 100%;
+        padding: 0 0 3rem 0;
+
+        .title {
+            @include lineAnimationTitleBefore;
+            padding: 0 5rem 0 0;
+            position: relative;    
+
+            
+            h1 {
+                @include subHeadingThree;;
+                margin: 0;
+                padding:0;
+            }
+
+            p {
+                @include paragraph;
+            }
+
+            .buttonContainer {
+                position: absolute;
+                bottom: -7rem;
+                
+
+                button {
+                    @include buttonNeutral;
+                }
+
+                button:hover {
+                    @include buttonNeutralHover;
+                }
+
+                
+            }
+        }
+
+        .profile {
+            @include lineAnimationTitleBefore02;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+        
+        .buttonContainerMobile {
+            visibility: hidden;
+        }
+    }
+
+    .titleContainerTwo {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 100%;
+
+        .title {
+            @include lineAnimationTitleBefore;
+            padding: 0 5rem 0 0;
+            position: relative;    
+
+            
+            h1 {
+                @include subHeadingThree;;
+                margin: 0;
+                padding:0;
+            }
+
+            p {
+                @include paragraph;
+            }
+
+            .buttonContainer {
+                position: absolute;
+                bottom: -7rem;
+                
+
+                button {
+                    @include buttonNeutral;
+                }
+
+                button:hover {
+                    @include buttonNeutralHover;
+                }
+
+                
+            }
+        }
+
+        .profile {
+            @include lineAnimationTitleBefore02;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+        
+        .buttonContainerMobile {
+            visibility: hidden;
+        }
+    }
+}
+
 footer {
     @include defaultFooterDesktop;
 }
@@ -425,6 +547,31 @@ section.sectionTwo.active {
         img {
             @include lineAnimationTitleAfter;
         }
+    }
+}
+
+section.sectionThree.active {
+
+    .container {
+        @include lineAnimationTitleAfter
+    }
+
+    .titleContainer {
+
+        .title {
+            @include lineAnimationTitleAfter;
+        }
+    }
+
+    .titleContainerTwo {
+
+        .title {
+            @include lineAnimationTitleAfter;
+        }
+    }
+
+    .profile {
+        opacity: 100%;
     }
 }
 
@@ -517,6 +664,10 @@ section.sectionTwo.active {
 
         }
         
+    }
+
+    section.sectionThree  {
+        @include sectionTablet;
     }
 
     footer {
@@ -684,6 +835,122 @@ section.sectionTwo.active {
     section.sectionTwo.active {
         .diagramContainer {
             @include lineAnimationTitleAfter;
+        }
+    }
+
+    section.sectionThree {
+        @include sectionMobile;
+        height: 100%;
+
+        .titleContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 0 5rem 0;
+    
+            .title {
+                @include lineAnimationTitleBefore;
+                padding: 0 0 3rem 0;
+    
+                
+                h1 {
+                    @include subHeading;
+                    margin: 0;
+                    padding:0;
+                }
+    
+                p {
+                    @include paragraph;
+                }
+
+                .buttonContainer {
+                    visibility:hidden;
+                }
+            }
+    
+            .profile {
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 3rem 0;
+    
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            .buttonContainerMobile {
+                visibility: visible;
+                width: 100%;
+
+                button {
+                    @include buttonNeutral;
+                    width: 100%;
+                }
+
+                button:hover {
+                    @include buttonNeutralHover;
+                }
+            }
+        }
+
+        
+        .titleContainerTwo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 0 5rem 0;
+    
+            .title {
+                @include lineAnimationTitleBefore;
+                padding: 0 0 3rem 0;
+    
+                
+                h1 {
+                    @include subHeading;
+                    margin: 0;
+                    padding:0;
+                }
+    
+                p {
+                    @include paragraph;
+                }
+
+                .buttonContainer {
+                    visibility:hidden;
+                }
+            }
+    
+            .profile {
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 3rem 0;
+    
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            .buttonContainerMobile {
+                visibility: visible;
+                width: 100%;
+
+                button {
+                    @include buttonNeutral;
+                    width: 100%;
+                }
+
+                button:hover {
+                    @include buttonNeutralHover;
+                }
+            }
         }
     }
 

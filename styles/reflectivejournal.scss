@@ -118,6 +118,43 @@ main {
     }
 }
 
+.sectionOne_02 {
+    @include section;
+    height: 130vh;
+
+    .titleContainer {
+        display: flex;
+        padding: 0 0 2rem 0;
+
+        .title {
+            @include lineAnimationTitleBefore;
+            padding: 0 0 0 0;   
+
+            
+            h1 {
+                @include subHeadingThree;
+                margin: 0;
+                padding:0;
+            }
+
+        }
+    }
+
+    .diagramContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70%;
+        padding: 0;
+        
+        img {
+            height: auto;
+            width: 73vw;
+            @include lineAnimationTitleBefore;
+        }
+    }
+}
+
 .sectionTwo {
     @include section;
     height: auto;
@@ -350,6 +387,26 @@ section.sectionOne.active {
     }
 }
 
+section.sectionOne_02.active {
+
+    .container {
+        @include lineAnimationTitleAfter
+    }
+
+    .titleContainer {
+
+        .title {
+            @include lineAnimationTitleAfter;
+        }
+    }
+
+    .diagramContainer {
+        img {
+            @include lineAnimationTitleAfter;
+        }
+    }
+}
+
 section.sectionTwo.active {
     @include lineAnimationTitleAfter
 
@@ -391,6 +448,11 @@ section.sectionTwo.active {
     }
 
     section.sectionOne {
+        @include sectionTablet;
+        height: 100vh;
+    }
+
+    section.sectionOne_02 {
         @include sectionTablet;
         height: 100vh;
     }
@@ -506,6 +568,32 @@ section.sectionTwo.active {
     }
 
     section.sectionOne {
+        @include sectionMobile;
+        height: 100%;
+
+        .titleContainer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 0 3rem 0;
+    
+            .title {
+                @include lineAnimationTitleBefore;
+                padding: 0 0 3rem 0;
+    
+                p {
+                    @include paragraph;
+                }
+            }
+        }
+
+        .diagramContainer {
+            padding: 0 0 10rem 0;
+        }
+    }
+
+    section.sectionOne_02 {
         @include sectionMobile;
         height: 100%;
 

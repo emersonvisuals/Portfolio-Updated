@@ -1156,6 +1156,10 @@ main .background svg {
   padding: 0;
 }
 
+.sectionThree .titleContainer .title h2 {
+  color: #1C56A3;
+}
+
 .sectionThree .titleContainer .title p {
   font-size: clamp(1.19rem, 0.9vw, 2rem);
   font-family: poppins;
@@ -2691,12 +2695,9 @@ section.sectionThree.active .profile {
     transition: 0.5s all;
     -webkit-transform: translateY(-3rem);
             transform: translateY(-3rem);
-    padding: 0 0 3rem 0;
+    padding: 0;
   }
   section.sectionThree .titleContainer .title h1 {
-    text-transform: uppercase;
-    font-size: clamp(3.75rem, 3.75vw, 6.5rem);
-    font-weight: 700;
     margin: 0;
     padding: 0;
   }
@@ -2779,12 +2780,9 @@ section.sectionThree.active .profile {
     transition: 0.5s all;
     -webkit-transform: translateY(-3rem);
             transform: translateY(-3rem);
-    padding: 0 0 3rem 0;
+    padding: 0;
   }
   section.sectionThree .titleContainerTwo .title h1 {
-    text-transform: uppercase;
-    font-size: clamp(3.75rem, 3.75vw, 6.5rem);
-    font-weight: 700;
     margin: 0;
     padding: 0;
   }
@@ -2808,7 +2806,7 @@ section.sectionThree.active .profile {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 0 3rem 0;
+    padding: 0 0 5rem 0;
   }
   section.sectionThree .titleContainerTwo .profile img {
     height: auto;

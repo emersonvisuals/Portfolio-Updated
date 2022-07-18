@@ -665,43 +665,72 @@ section.sectionOne form {
 }
 
 section.sectionOne form .nameContainer input {
-  width: 97.75%;
-  padding: 1rem;
+  width: calc(99% - 1rem);
+  padding: 1rem 0 1rem 1rem;
   font-size: clamp(0.2rem, 2vw, rem);
-  border: solid #1C56A3 2px;
+  border: solid #1C56A3 1px;
   font-family: poppins;
+  resize: vertical;
 }
 
 section.sectionOne form .emailContainer input {
-  width: 97.75%;
-  padding: 1rem;
+  width: calc(99% - 1rem);
+  padding: 1rem 0 1rem 1rem;
   font-size: clamp(0.2rem, 2vw, rem);
-  border: solid #1C56A3 2px;
+  border: solid #1C56A3 1px;
   font-family: poppins;
+  resize: vertical;
 }
 
 section.sectionOne form .companyContainer input {
-  width: 97.75%;
-  padding: 1rem;
+  width: calc(99% - 1rem);
+  padding: 1rem 0 1rem 1rem;
   font-size: clamp(0.2rem, 2vw, rem);
-  border: solid #1C56A3 2px;
+  border: solid #1C56A3 1px;
   font-family: poppins;
+  resize: vertical;
 }
 
 section.sectionOne form .enquiryContainer textarea {
-  width: 97.75%;
-  padding: 1rem;
+  width: calc(99% - 1rem);
+  padding: 1rem 0 10rem 1rem;
   font-size: clamp(0.2rem, 2vw, rem);
-  border: solid #1C56A3 2px;
+  border: solid #1C56A3 1px;
   font-family: poppins;
+  resize: vertical;
 }
 
 section.sectionOne form .submitContainer {
   width: 100%;
+  padding: 2rem 0 0 0;
 }
 
-section.sectionOne form .submitContainer button.contactButton {
+section.sectionOne form .submitContainer button.contactButtonTwo {
   width: 100%;
+  padding: 2rem;
+  background-color: #1C56A3;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 100rem;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  opacity: 50%;
+  cursor: no-drop;
+}
+
+section.sectionOne form .submitContainer button.contactButtonTwo.active {
+  width: 100%;
+  padding: 2rem;
+  background-color: #1C56A3;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 100rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  opacity: 100%;
 }
 
 footer {

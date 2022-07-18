@@ -111,16 +111,21 @@ section.sectionOne {
         .enquiryContainer {
 
             textarea {
-                @include contactContainer;
+                @include contactContainerLarge;
             }
 
         }
 
         .submitContainer {
             width: 100%;
+            padding: 2rem 0 0 0;
 
-            button.contactButton {
-                width: 100%;
+            button.contactButtonTwo {
+                @include contactSubmitButton;
+            }
+
+            button.contactButtonTwo.active {
+                @include contactSubmitButtonActive;
             }
         }
     }

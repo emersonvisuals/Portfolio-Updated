@@ -76,28 +76,27 @@
         <form>
             <div class="nameContainer">
                 <h1 class = 'nameTitle'>Your name: </h1>
-                <input id="name" name="name" type="text" placeholder="Please enter your name."/>
+                <input id="name" name="name" type="text" placeholder="Please enter your name." onkeyup="isEmpty()"/>
             </div>
 
             <div class="emailContainer">
                 <h1 class = 'emailTitle'>Email: </h1>
-                <input id="email" name="email" type="text" placeholder="Please enter your email."/>
+                <input id="email" name="email" type="text" placeholder="Please enter your email." onkeyup="isEmpty()"/>
             </div>
     
             <div class="companyContainer">
                 <h1 class = 'companyTitle'>Company: </h1>
-                <input id="company" name="company" type="text" placeholder="Please enter your business name."/>
+                <input id="company" name="company" type="text" placeholder="Please enter your business name." onkeyup="isEmpty()"/>
             </div>
 
             <div class="enquiryContainer">
                 <h1 class = 'enquiryTitle'>Enquiry Details: </h1>
-                <textarea placeholder="Please enter your enquiries."></textarea>
+                <textarea placeholder="Please enter your enquiries." onkeyup="isEmpty()"></textarea>
             </div>
 
             <div class="submitContainer">
-                <button class = "contactButton" type="submit">Send message</button>
+                <button class = "contactButtonTwo" type = "button">Send message</button>
             </div>
-
         </form>
     </section>
 
@@ -136,131 +135,10 @@
         </div>
     </footer>
     
-    <script src="uxuidesign.js"></script>
+    <script src="contact.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-    <script>
-                        /**
-         * Example of starting a plugin with options.
-         * I am just passing some of the options in the following example.
-         * you can also start the plugin using $('.marquee').marquee(); with defaults
-        */
-        $('.marqueeOne').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'left',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-        $('.marqueeTwo').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'right',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-        $('.marqueeThree').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'left',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-        $('.marqueeFour').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'right',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-        $('.marqueeFive').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'left',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-
-        $('.marqueeSix').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'right',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-
-        $('.marqueeSeven').marquee({
-            //duration in milliseconds of the marquee
-            duration: 20000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'left',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-
-            startVisible:true,
-
-            pauseOnHover:true
-        });
-    </script>
 
 </body>
 </html>

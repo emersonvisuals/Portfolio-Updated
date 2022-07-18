@@ -1316,9 +1316,45 @@ $logoSize: clamp(5rem, 20vw, 20rem);
 // contact 
 
     @mixin contactContainer {
-        width: 97.75%;
-        padding: 1rem;
+        width: calc(99% - 1rem);
+        padding: 1rem 0 1rem 1rem;
         font-size: $subheadingFiveFontSizeClamp;
-        border: solid $blue 2px;
+        border: solid $blue 1px;
         font-family: $fontFamily;
+        resize: vertical;
+    }
+
+    @mixin contactContainerLarge {
+        width: calc(99% - 1rem);
+        padding: 1rem 0 10rem 1rem;
+        font-size: $subheadingFiveFontSizeClamp;
+        border: solid $blue 1px;
+        font-family: $fontFamily;
+        resize: vertical;
+    }
+
+    @mixin contactSubmitButton {
+        width: 100%; 
+        padding: 2rem; 
+        background-color: $blue;
+        color: $white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 100rem;
+        transition: 0.5s all;
+        opacity: 50%;
+        cursor: no-drop;
+    }
+
+    @mixin contactSubmitButtonActive {
+        width: 100%; 
+        padding: 2rem; 
+        background-color: $blue;
+        color: $white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 100rem;
+        cursor: pointer;
+        transition: 0.5s all;
+        opacity: 100%;
     }

@@ -170,11 +170,19 @@ const scrollUp = document.querySelector('.portfolioBelow');
 // disable / enable contact button 
 const submit = document.querySelector('button.contactButtonTwo');
 
+submit.addEventListener('click', function(){
+    if (submit.classList.contains('active')){
+        return
+    } else {
+        alert('please fill in the form');
+    }
+});
+
 function isEmpty() {
     const nameContainer = document.querySelector('input#name').value;
     const emailContainer = document.querySelector('input#email').value;
     const companyContainer = document.querySelector('input#company').value;
-    const enquiryContainer = document.querySelector('textarea').value;
+    const enquiryContainer = document.querySelector('input#enquiries').value;
 
     if (nameContainer !== '' && emailContainer !== '' && companyContainer !== '' && enquiryContainer !== '') {
         submit.classList.add('active');

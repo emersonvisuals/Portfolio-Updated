@@ -691,7 +691,7 @@ section.sectionOne form .companyContainer input {
   resize: vertical;
 }
 
-section.sectionOne form .enquiryContainer textarea {
+section.sectionOne form .enquiryContainer input {
   width: calc(99% - 1rem);
   padding: 1rem 0 10rem 1rem;
   font-size: clamp(0.2rem, 2vw, rem);
